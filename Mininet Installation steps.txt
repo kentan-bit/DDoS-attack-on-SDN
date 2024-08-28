@@ -1,0 +1,67 @@
+#! Install Mininet from source
+
+#1. Install repositories
+
+$ git clone https://github.com/mininet/mininet
+
+#2. Install Mininet on VM (install everything)
+
+$ mininet/util/install.sh -a
+
+#3. Install OpenFlow wireshark dissector
+
+$ install.sh -h
+
+#4. Test Mininet basic functionality
+
+sudo mn --switch ovsbr --test pingall
+
+#5. Install python3 
+
+$ sudo PYTHON=python3 mininet/util/install.sh -n
+
+#! If using VM Mininet Image, please perform step below to install GUI.
+
+$ sudo apt-get update
+
+$ sudo apt-get install xinit x11-xserver-utils ubuntu-desktop
+
+$ sudo apt-get install virtualbox-guest-x11
+
+$ reboot
+
+#! Mininet Walkthrough
+
+#1. Start mininet with following custom topologies that includes 3 switches, and 20 end-nodes
+
+$ Sudo mn –custom ~/Downloads/mininet/sdn_topology.py –topo=project –controller remote,ip=10.0.2.15 –switch ovs,protocols=OpenFlow13
+
+#! Miniedit.py tips
+
+#1. Fix the default miniedit.py to fix the error in exporting the topology into .py file
+
+	#a. On line 1452, change to 
+	 
+	$ self.appPrefs.update(loadedTopology['application'])
+
+	#b. On line 1686 and 1705, change to 
+	 
+	$ f = open(filename,'w')
+
+#2. Save changes on miniedit.py file. 
+
+#3. Run miniedit.py
+
+$ python3 ~/mininet/examples/miniedit.py 
+
+#4. Click on icons and add the devices according to the needed requirements.
+
+#5. Click on NetLink icon to connect devices.
+
+#6. Save topology for .mn file and .py file.
+
+\File>Save # save as .mn file
+
+\File>Export as Level 2 # save as .py file
+
+
