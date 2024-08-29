@@ -1,0 +1,69 @@
+#Ubuntu 22.04 virtual machine
+
+#1. Install repositories
+
+$ sudo apt install vim git gedit wget net-tools
+
+#2. install mininet
+$ sudo apt install mininet
+
+#3. install java 
+$ sudo apt install openjdk-8-jdk
+
+#4. Append JAVA_HOME variable to ~/.bashrc
+$ vim ~/.bashrc
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
+export PATH=$JAVA_HOME/bin:$PATH
+
+$ source ~/.bashrc
+
+#5. Install ONOS and extract the files into /opt/onos
+$ sudo wget -c https://repo1.maven.org/maven2/org/onosproject/onos-releases/2.0.0/onos-2.0.0.tar.gz
+$ sudo tar zxvf onos-2.0.0.tar.gz
+
+#6. Run ONOS services
+$ cd /opt/onos/bin
+$ sudo /opt/onos/bin/onos-service start
+
+#7. Configure ssh in another terminal
+$ mkdir ~/.ssh -- if there's no existing 
+$ vim ~/.ssh/config
+
+HostKeyAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+
+#8. Enter ONOS CLI terminal and activate application
+$ /opt/onos/bin/onos -l onos
+password: rocks
+
+onos@root$ app activate org.onosproject.pipelines.basic
+onos@root$ app activate org.onosproject.fwd
+onos@root$ app activate org.onosproject.openflow
+
+
+#9. Open web browser to log in into GUI
+http://localhost:8181/onos/ui
+
+username: onos 
+password: rocks
+
+#if host icons does not display in GUI, press h
+#11. Install sFlow-RT
+
+$ sudo wget https://inmon.com/products/sFlow-RT/sflow-rt.tar.gz
+$ tar -xvzf sflow-rt.tar.gz
+& ./sflow-rt/start.sh
+
+#12. Install applications and restart sflow
+$ sudo ~/Downloads/sflow-rt/get-app.sh sflow-rt browse-metrics
+$ sudo ~/Downloads/sflow-rt/get-app.sh sflow-rt browse-flows
+
+#13. Open web gui
+http://localhost:8008/html
+
+
+
+
