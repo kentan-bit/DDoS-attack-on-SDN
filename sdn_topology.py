@@ -63,6 +63,9 @@ class Project ( Topo ):
         net.addLink(s3, h18)
         net.addLink(s3, h20)
         net.addLink(s3, h19)
+        net.addLink(s1, s2)
+        net.addLink(s2, s3)
+        net.addLink(s1, s3)
 
        print('*** Post configure switches and hosts\n')
 
