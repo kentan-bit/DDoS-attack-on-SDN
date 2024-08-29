@@ -1,0 +1,18 @@
+# Pre-condition: mininet and ONOS has been installed 
+
+#1. Start ONOS service
+$ sudo /opt/onos/bin/onos-service start
+
+#2. Log in into ONOS CLI and activate relevant apps
+$ /opt/onos/bin/onos -l onos
+onos> apps activate org.onosproject.fwd
+onos> apps activate org.onosproject.openflow
+onos> apps activate org.onosproject.pipelines.basic
+
+#3. Log in into ONOS GUI at http://localhost:8181/onos/ui username/password:onos/rocks
+
+#4. Upload custom topology into mininet and the topology will automatically appear on the web GUI
+$ sudo mn --custom ~/Downloads/mininet/sdn_topology.py --controller remote,ip=10.0.2.15 --topo=project --switch ovs,protocols=OpenFlow13
+
+mininet> pingall
+
