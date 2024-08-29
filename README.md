@@ -7,9 +7,7 @@ This project requires an understanding of OpenFlow, the ONOS controller, the net
 # ONOS
 Java version: OpenJDK 8 (1.8.0)
 ONOS version: 2.0.0
-'''console
-test
-'''
+`test`
 
 
 # DDoS
