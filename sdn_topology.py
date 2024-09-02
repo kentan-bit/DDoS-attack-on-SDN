@@ -13,7 +13,7 @@ from mininet.topo import Topo
 
 class Project ( Topo ):
     def __init__( net ):
-        Topo.__ininet__( net )
+        Topo.__init__( net )
 
         print( '*** Add switches\n')
         s1 = net.addSwitch('s1')
