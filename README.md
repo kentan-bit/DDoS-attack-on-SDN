@@ -5,10 +5,42 @@ This project requires an understanding of OpenFlow, the ONOS controller, the net
 ## Mininet
 
 ## ONOS
-Java version: OpenJDK 8 (1.8.0)
-ONOS version: 2.0.0
+Java version: OpenJDK 8 (1.8.0),
+ONOS version: 2.0.0, Apache Karaf version: 4.2.2, OpenFlow verions: 1.3
+1. Install ONOS and extract the files into /opt/onos
 ```
-test
+$ sudo wget -c https://repo1.maven.org/maven2/org/onosproject/onos-releases/2.0.0/onos-2.0.0.tar.gz
+$ sudo tar zxvf onos-2.0.0.tar.gz
+```
+2. Run ONOS services
+```
+$ cd /opt/onos/bin
+$ sudo /opt/onos/bin/onos-service start
+```
+3. Configure ssh in another terminal
+```
+$ mkdir ~/.ssh -- if there's no existing 
+$ vim ~/.ssh/config
+```
+```
+HostKeyAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+```
+3. Enter ONOS CLI terminal and activate application
+```
+$ /opt/onos/bin/onos -l onos
+password: rocks
+
+onos> app activate org.onosproject.pipelines.basic
+onos> app activate org.onosproject.fwd
+onos> app activate org.onosproject.openflow
+```
+
+4. Open web browser to log in into GUI
+http://localhost:8181/onos/ui
+```
+username: onos 
+password: rocks
 ```
 
 
