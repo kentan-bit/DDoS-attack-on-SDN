@@ -3,6 +3,22 @@ This project aims to demonstrate a DDoS attack on an SDN. This project serves mo
 This project requires an understanding of OpenFlow, the ONOS controller, the network simulator called Mininet, DDoS penetration testing tools; and using these building blocks to implement a simulator of DDoS attacks against SDNs. 
 
 ## Mininet
+Mininet version: 2.3.0
+
+1. Install mininet repositories form source.
+```
+$ git clone https://github.com/mininet/mininet
+```
+2. Install Mininet
+```
+mininet/util/install.sh -a # to install every dependencies such as Open vSwitch, OpenFlow wireshark and POX.
+```
+3. Test Mininet after installation
+```
+sudo mn --switch ovsbr --test pingall
+```
+
+
 
 ## ONOS
 Java version: OpenJDK 8 (1.8.0),
