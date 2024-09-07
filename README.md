@@ -61,3 +61,4 @@ password: rocks
 
 
 ## DDoS
+To simulate a DDoS attack, refer to the DDoS Attack Simulation File.
