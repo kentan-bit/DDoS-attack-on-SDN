@@ -19,12 +19,12 @@ class Project ( Topo ):
         s1 = net.addSwitch('s1')
         s2 = net.addSwitch('s2')
         s3 = net.addSwitch('s3')
-
+        
         print( '*** Add hosts\n')
         h1 = net.addHost('h1')
         h2 = net.addHost('h2')
         h3 = net.addHost('h3')
-         h4 = net.addHost('h4')
+        h4 = net.addHost('h4')
         h5 = net.addHost('h5')
         h6 = net.addHost('h6')
         h7 = net.addHost('h7')
@@ -41,7 +41,7 @@ class Project ( Topo ):
         h18 = net.addHost('h18')
         h19 = net.addHost('h19')
         h20 = net.addHost('h20')
-
+        
         print( '*** Add links\n')
         net.addLink(s1, h1)
         net.addLink(s1, h2)
@@ -66,7 +66,7 @@ class Project ( Topo ):
         net.addLink(s1, s2)
         net.addLink(s2, s3)
         net.addLink(s1, s3)
-
-       print('*** Post configure switches and hosts\n')
+        
+        print('*** Post configure switches and hosts\n')
 
 topos = {'project': (lambda: Project())}
