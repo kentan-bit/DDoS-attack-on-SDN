@@ -35,7 +35,7 @@ $ sudo /opt/onos/bin/onos-service start
 ```
 3. Configure ssh in another terminal
 ```
-$ mkdir ~/.ssh -- if there's no existing 
+$ mkdir ~/.ssh # if it doesn't exist
 $ vim ~/.ssh/config
 ```
 ```
