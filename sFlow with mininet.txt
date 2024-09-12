@@ -4,7 +4,9 @@
 
 $ sudo ./sflow-rt/get-app.sh sflow-rt mininet-dashboard
 
-2. Restart sFlow service
+2. Start sFlow service
+
+$ ./sflow-rt/start.sh
 
 3. Run custom mininet topology along with sflow.py 
 
