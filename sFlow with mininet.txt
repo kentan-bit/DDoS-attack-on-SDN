@@ -1,0 +1,11 @@
+# Running sFlow with custom topology on Mininet
+
+1. Install Mininet Dashboard application for sFlow
+
+$ sudo ./sflow-rt/get-app.sh sflow-rt mininet-dashboard
+
+2. Restart sFlow service
+
+3. Run custom mininet topology along with sflow.py 
+
+$ sudo mn --custom ~/DDos-attack-on-SDN/sdn_topology.py,sflow-rt/extras/sflow.py --controller remote,ip=192.168.56.13 --topo=project --switch ovs,protocols=OpenFlow13
