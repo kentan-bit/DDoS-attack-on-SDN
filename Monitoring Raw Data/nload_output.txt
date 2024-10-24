@@ -1,0 +1,58 @@
+[?1049h[22;0;0t[1;25r(B[m[4l[?7h[?1h=[H[2J[H[2J[H[2JDevice enp0s3 [192.168.1.12] (1/32):
+[2d=[92b=[3;1HIncoming:[3;48HOutgoing:
+[4dCurr: 104.00 Bit/s[4;48HCurr: 64.00 Bit/s
+[5dAvg: 104.00 Bit/s[5;48HAvg: 64.00 Bit/s
+[6dMin: 104.00 Bit/s[6;48HMin: 64.00 Bit/s
+[7dMax: 104.00 Bit/s[7;48HMax: 64.00 Bit/s
+[8dTtl: 306.10 GByte[8;48HTtl: 2.52 GByte
+[10dDevice lo [127.0.0.1] (2/32):
+[11d=[92b=[12;1HIncoming:[12;48HOutgoing:
+[13dCurr: 102.97 kBit/s[13;48HCurr: 102.97 kBit/s
+[14dAvg: 102.97 kBit/s[14;48HAvg: 102.97 kBit/s
+[15dMin: 102.97 kBit/s[15;48HMin: 102.97 kBit/s
+[16dMax: 102.97 kBit/s[16;48HMax: 102.97 kBit/s
+[17dTtl: 689.55 MByte[17;48HTtl: 689.55 MByte
+[19d[H[2JDevice enp0s3 [192.168.1.12] (1/32):
+[2d=[92b=[3;1HIncoming:[3;48HOutgoing:
+[4dCurr: 120.00 Bit/s[4;48HCurr: 104.00 Bit/s
+[5dAvg: 112.00 Bit/s[5;48HAvg: 88.00 Bit/s
+[6dMin: 104.00 Bit/s[6;48HMin: 64.00 Bit/s
+[7dMax: 120.00 Bit/s[7;48HMax: 104.00 Bit/s
+[8dTtl: 306.10 GByte[8;48HTtl: 2.52 GByte
+[10dDevice lo [127.0.0.1] (2/32):
+[11d=[92b=[12;1HIncoming:[12;48HOutgoing:
+[13dCurr: 101.84 kBit/s[13;48HCurr: 101.84 kBit/s
+[14dAvg: 102.40 kBit/s[14;48HAvg: 102.40 kBit/s
+[15dMin: 101.84 kBit/s[15;48HMin: 101.84 kBit/s
+[16dMax: 102.97 kBit/s[16;48HMax: 102.97 kBit/s
+[17dTtl: 689.80 MByte[17;48HTtl: 689.80 MByte
+[19d[H[2JDevice enp0s3 [192.168.1.12] (1/32):
+[2d=[92b=[3;1HIncoming:[3;48HOutgoing:
+[4dCurr: 16.00 Bit/s[4;48HCurr: 0.00 Bit/s
+[5dAvg: 80.00 Bit/s[5;48HAvg: 56.00 Bit/s
+[6dMin: 16.00 Bit/s[6;48HMin: 0.00 Bit/s
+[7dMax: 120.00 Bit/s[7;48HMax: 104.00 Bit/s
+[8dTtl: 306.10 GByte[8;48HTtl: 2.52 GByte
+[10dDevice lo [127.0.0.1] (2/32):
+[11d=[92b=[12;1HIncoming:[12;48HOutgoing:
+[13dCurr: 102.88 kBit/s[13;48HCurr: 102.88 kBit/s
+[14dAvg: 102.55 kBit/s[14;48HAvg: 102.55 kBit/s
+[15dMin: 101.84 kBit/s[15;48HMin: 101.84 kBit/s
+[16dMax: 102.97 kBit/s[16;48HMax: 102.97 kBit/s
+[17dTtl: 690.05 MByte[17;48HTtl: 690.05 MByte
+[19d[H[2JDevice enp0s3 [192.168.1.12] (1/32):
+[2d=[92b=[3;1HIncoming:[3;48HOutgoing:
+[4dCurr: 5.77 kBit/s[4;48HCurr: 64.00 Bit/s
+[5dAvg: 1.50 kBit/s[5;48HAvg: 56.00 Bit/s
+[6dMin: 16.00 Bit/s[6;48HMin: 0.00 Bit/s
+[7dMax: 5.77 kBit/s[7;48HMax: 104.00 Bit/s
+[8dTtl: 306.10 GByte[8;48HTtl: 2.52 GByte
+[10dDevice lo [127.0.0.1] (2/32):
+[11d=[92b=[12;1HIncoming:[12;48HOutgoing:
+[13dCurr: 96.65 kBit/s[13;48HCurr: 96.65 kBit/s
+[14dAvg: 101.08 kBit/s[14;48HAvg: 101.08 kBit/s
+[15dMin: 96.65 kBit/s[15;48HMin: 96.65 kBit/s
+[16dMax: 102.97 kBit/s[16;48HMax: 102.97 kBit/s
+[17dTtl: 690.29 MByte[17;48HTtl: 690.29 MByte
+[19d[H[2J[25;1H[?1049l[23;0;0t
+[?1l>
