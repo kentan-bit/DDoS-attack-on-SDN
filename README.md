@@ -69,27 +69,27 @@ Tools used for monitoring: Sflow-rt, iperf3, Wireshark
 
 1. Sflow-rt
    * Install sflow-rt from source
-    ```
-      $ sudo wget https://inmon.com/products/sFlow-RT/sflow-rt.tar.gz
-      $ tar -xvzf sflow-rt.tar.gz
-     ```
+   ```
+   $ sudo wget https://inmon.com/products/sFlow-RT/sflow-rt.tar.gz
+   $ tar -xvzf sflow-rt.tar.gz
+   ```
    * Install application and start sflow service
-     ```
-      $ ./sflow-rt/get-app.sh sflow-rt browse-metrics
-      $ ./sflow-rt/get-app.sh sflow-rt browse-metrics
-      $ ./sflow-rt/get-app.sh sflow-rt mininet-dashboard
-      $ ./sflow-rt/start.sh
-     ```
+   ```
+   $ ./sflow-rt/get-app.sh sflow-rt browse-metrics
+   $ ./sflow-rt/get-app.sh sflow-rt browse-metrics
+   $ ./sflow-rt/get-app.sh sflow-rt mininet-dashboard
+   $ ./sflow-rt/start.sh
+   ```
    * Open sflow web GUI http://localhost:8008/html
      
 2. iperf3
    * Install iperf3
-     ```
-      $ sudo apt install -y iperf3
-     ```
+   ```
+   $ sudo apt install -y iperf3
+   ```
      
 3. Wireshark
    * Check if Wireshark has been installed locally. If not, install Wireshark using the following command:
-     ```
-      $ sudo apt install wireshark
-     ```
+   ```
+   $ sudo apt install wireshark
+   ```
