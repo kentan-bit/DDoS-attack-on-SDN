@@ -5,7 +5,7 @@ This project requires an understanding of OpenFlow, the ONOS controller, the net
 ## Mininet
 Mininet version: 2.3.0
 
-1. Install mininet repositories form source.
+1. Install mininet repositories form source
 ```
 $ git clone https://github.com/mininet/mininet
 ```
@@ -62,3 +62,34 @@ password: rocks
 
 ## DDoS
 To simulate a DDoS attack, refer to the DDoS Attack Simulation File.
+
+
+## Monitoring
+Tools used for monitoring: Sflow-rt, iperf3, Wireshark
+
+1. Sflow-rt
+   * Install sflow-rt from source
+    ```
+      $ sudo wget https://inmon.com/products/sFlow-RT/sflow-rt.tar.gz
+      $ tar -xvzf sflow-rt.tar.gz
+     ```
+   * Install application and start sflow service
+     ```
+      $ ./sflow-rt/get-app.sh sflow-rt browse-metrics
+      $ ./sflow-rt/get-app.sh sflow-rt browse-metrics
+      $ ./sflow-rt/get-app.sh sflow-rt mininet-dashboard
+      $ ./sflow-rt/start.sh
+     ```
+   * Open sflow web GUI http://localhost:8008/html
+     
+2. iperf3
+   * Install iperf3
+     ```
+      $ sudo apt install -y iperf3
+     ```
+     
+3. Wireshark
+   * Check if Wireshark has been installed locally. If not, install Wireshark using the following command:
+     ```
+      $ sudo apt install wireshark
+     ```
