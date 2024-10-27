@@ -21,12 +21,27 @@ sudo mn --switch ovsbr --test pingall
 
 
 ## ONOS
-Java version: OpenJDK 8 (1.8.0),
-ONOS version: 2.0.0, Apache Karaf version: 4.2.2, OpenFlow verions: 1.3
+Based on [ONOS requirements](https://wiki.onosproject.org/display/ONOS/Requirements) , ONOS requires JAVA 11.
+```
+$ sudo apt update
+$ sudo apt install openjdk-11-jdk
+```
+Set $JAVA_HOME variable for better performance
+```
+$ sudo cat >> /etc/environment <<EOL
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+EOL
+```
+Other software packages that is recommended to be installed includes:
+- preffered text editor (gedit, vim, etc.)
+- git
+- wget
+- net-tools
+
 1. Install ONOS and extract the files into /opt/onos
 ```
-$ sudo wget -c https://repo1.maven.org/maven2/org/onosproject/onos-releases/2.0.0/onos-2.0.0.tar.gz
-$ sudo tar zxvf onos-2.0.0.tar.gz
+$ sudo wget -c https://repo1.maven.org/maven2/org/onosproject/onos-releases/2.7.0/onos-2.7.0.tar.gz
+$ sudo tar zxvf onos-2.7.0.tar.gz
 ```
 2. Run ONOS services
 ```
@@ -59,6 +74,12 @@ username: onos
 password: rocks
 ```
 
+## Run Mininet with ONOS as Controller
+```
+$ sudo mn --controller remote,ip=<host ip address> --switch ovs,protocols=OpenFlow14 --custom /path/to/DDoS-attack-on-SDN/sdn_topology.py --topo=project
+
+mininet> pingall 
+```
 
 ## DDoS
 To simulate a DDoS attack, refer to the DDoS Attack Simulation File.
