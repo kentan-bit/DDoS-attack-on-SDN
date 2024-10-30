@@ -76,16 +76,37 @@ password: rocks
 
 ## Run Mininet with ONOS as Controller
 ```
-$ sudo mn --controller remote,ip=<host ip address> --switch ovs,protocols=OpenFlow14 --custom /path/to/DDoS-attack-on-SDN/sdn_topology.py --topo=project
+$ sudo mn --controller remote,ip=<host ip address> --switch ovs,protocols=OpenFlow14 --custom /path/to/DDoS-attack-on-SDN/sdn_topology.py --topo=project --link tc
 
 mininet> pingall 
 ```
 
 ## DDoS
+### DDoS Attack Using hping3 Tool
 To simulate a DDoS attack, refer to the DDoS Attack Simulation File.
 
+### DDoS Attack Using Python Script
+This script uses [Scapy](https://scapy.readthedocs.io/en/latest/introduction.html), which is a packet manipulation library written in Python. It was originally developed by [brian404](https://scapy.readthedocs.io/en/latest/introduction.html), which initially demonstrates a SYN flood DDoS attack tool to send high volume of SYN packets to a target server. We made some changes in the script to send higher payload and spoof source IP addresses.
 
-## Monitoring
+To simulate DDoS attack on the SDN, we chose a host to act as server - in this case is h20(IP:10.0.0.20) - and three hosts to act botnet to launch the DDoS script.
+
+1. Open host terminals from mininet CLI
+```
+mininet> xterm h1 h8 h15
+```
+
+2. Launch DDoS attack script with desired parameters towards the targer server in each host terminals. Make sure to use the correct path where the ddos.py script resides in.
+```
+$ python3 ddos.py 10.0.0.20
+```
+Usage: python3 ddos.py <target IP|link>
+* ```<--port>``` : Specify port number to send the attack packets to. Default is 80
+* ```<--threads>``` : Specify the number of threads for the attack
+* ```<--method>``` : Either ```scapy``` or ```socket``` to choose the attack method. Default is scapy.
+
+In this case, we are using scapy method to generate the manipulated packets.
+
+## Data Collection
 Tools used for monitoring: Sflow-rt, iperf3, Wireshark
 
 1. Sflow-rt
