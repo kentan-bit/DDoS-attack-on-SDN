@@ -81,6 +81,11 @@ $ sudo mn --controller remote,ip=<host ip address> --switch ovs,protocols=OpenFl
 mininet> pingall 
 ```
 
+To properly stop the ONOS service, use this command to avoid complications in the next service run
+```
+sudo /opt/onos/bin/onos-service stop
+```
+
 ## DDoS
 ### DDoS Attack Using hping3 Tool
 To simulate a DDoS attack, refer to the DDoS Attack Simulation File.
